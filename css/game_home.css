@@ -1,0 +1,424 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+#canvas{
+  background: linear-gradient(#32029b, #050118);
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+/*para timeline:*/
+.cd-container {
+  
+  max-width: 1080px;
+  margin: 0 auto;
+ 
+  padding: 0 10%;
+  border-radius: 2px;
+}
+
+.cd-container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#cd-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25px;
+  height: 100%;
+  width: 4px;
+  background: #7E57C2;
+}
+
+@media only screen and (min-width: 1170px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+.cd-timeline-img {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #7E57C2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.cd-timeline-img {
+  background: #673AB7;
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 15px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
+}
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  margin-right: 30px;
+  background: #430261;
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 1em;
+}
+.cd-timeline-content .timeline-content-info {
+  background: #673AB7;
+  padding: 5px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  box-shadow: inset 0 2px 0 rgba(20, 1, 56, 0.08);
+  border-radius: 2px;
+}
+.cd-timeline-content .timeline-content-info i {
+  margin-right: 5px;
+}
+.cd-timeline-content .timeline-content-info .timeline-content-info-title, .cd-timeline-content .timeline-content-info .timeline-content-info-date {
+  width: calc(50% - 2px);
+  display: inline-block;
+}
+@media (max-width: 500px) {
+  .cd-timeline-content .timeline-content-info .timeline-content-info-title, .cd-timeline-content .timeline-content-info .timeline-content-info-date {
+    display: block;
+    width: 100%;
+  }
+}
+.cd-timeline-content .content-skills {
+  font-size: 12px;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.cd-timeline-content .content-skills li {
+  background: #550cb4;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 2px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 3px 2px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-timeline-content img{width: 100%;}
+.cd-timeline-content h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.cd-timeline-content p, .cd-timeline-content {
+  color: #ffffff;
+  
+  font-size: 0.8125rem;
+}
+.cd-date {
+  color: rgba(34, 5, 63, 0.7);
+  
+  font-size: 7px;
+}
+
+.cd-timeline-content .cd-date {
+  display: inline-block;
+}
+
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+.cd-timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #430261;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    color: white;
+    margin-left: 0;
+    padding: 1.6em;
+    width: 36%;
+    margin: 0 5%;
+  }
+
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #430261;
+  }
+
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 6px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #333C42;
+  }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}
+
+video {
+    position: absolute;
+    top: -10;
+    bottom: 0;
+    right: 0;
+    left: -5;
+    margin: auto;
+    min-height: 50%;
+    min-width: 50%;
+}
+.right-content{
+    
+    
+    position:relative;
+    right: 1.5em;
+    align-content: center;
+    margin: -0.1em 0 0;
+    display: inline-block;
+    float: right;
+    width: 15%;
+    
+    }
+    /*loader*/
+	.loader {
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 3rem;
+		background-color: #4911c2;
+		color: #FFFFFF;
+		font-family: "Josefin Sans", sans-serif;
+		font-size: 10px;
+		font-weight: 100;
+		box-shadow: 0 0 10rem 0 #110330 inset;
+	  }
+	  
+	  
+	  .svg-calLoader {
+		width: 230px;
+		height: 230px;
+		transform-origin: 115px 115px;
+		animation: 1.4s linear infinite loader-spin;
+	  }
+	  
+	  .cal-loader__plane {
+		fill: #D4F21B;
+	  }
+	  
+	  .cal-loader__path {
+		stroke: #FFFFFF;
+		animation: 1.4s ease-in-out infinite loader-path;
+	  }
+	  
+	  @keyframes loader-spin {
+		to {
+		  transform: rotate(360deg);
+		}
+	  }
+	  @keyframes loader-path {
+		0% {
+		  stroke-dasharray: 0, 580, 0, 0, 0, 0, 0, 0, 0;
+		}
+		50% {
+		  stroke-dasharray: 0, 450, 10, 30, 10, 30, 10, 30, 10;
+		}
+		100% {
+		  stroke-dasharray: 0, 580, 0, 0, 0, 0, 0, 0, 0;
+		}
+    }
+    /**logo*/
+
+    .svglogo {
+      display: block;
+      font: 11.5em 'Andika';
+      width: 460px;
+      height: 250px;
+      margin: 0 auto;
+  }
+  
+  .text-copy {
+      fill: none;
+      stroke: white;
+      stroke-dasharray: 6% 29%;
+      stroke-width: 5px;
+      stroke-dashoffset: 0%;
+      animation: stroke-offset 5.5s infinite linear;
+  }
+  
+  .text-copy:nth-child(1){
+    stroke: #379351;
+    animation-delay: -1;
+  }
+  
+  .text-copy:nth-child(2){
+    stroke: #840037;
+    animation-delay: -2s;
+  }
+  
+  .text-copy:nth-child(3){
+    stroke: #BD0034;
+    animation-delay: -3s;
+  }
+  
+  .text-copy:nth-child(4){
+    stroke: #BD0034;
+    animation-delay: -4s;
+  }
+  
+  .text-copy:nth-child(5){
+    stroke: #FDB731;
+    animation-delay: -5s;
+  }
+  
+  @keyframes stroke-offset{
+    100% {stroke-dashoffset: -35%;}
+  }
+  /*GLOW LOGO*/
+  .glow {
+    
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-top: -50px;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #D4F21B, 0 0 40px #D4F21B, 0 0 50px #D4F21B, 0 0 60px #D4F21B, 0 0 70px #D4F21B;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #cce049, 0 0 40px #cce049, 0 0 50px #cce049, 0 0 60px #cce049, 0 0 70px #cce049, 0 0 80px #cce049;
+    }
+  }
