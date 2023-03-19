@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="EVeneros">
+    <meta name="author" content="EVeneros">
+	<link  rel="icon"   href="img/favicon.png" type="image/png" />
+    
+    <!-- CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Andika&display=swap" rel="stylesheet">
+	
+	
+    <link rel="stylesheet" href="css/jquery.pagepiling.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/game_home.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
+    <title>Wayra</title>
+  </head>
+<body>
+   
+   <!-- Loader -->
+   <div class="loader">
+	<!-- <div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>-->
+	<!--<div class="sk-folding-cube">
+		<div class="sk-cube1 sk-cube"></div>
+		<div class="sk-cube2 sk-cube"></div>
+		<div class="sk-cube4 sk-cube"></div>
+		<div class="sk-cube3 sk-cube"></div>
+	  </div>
+	-->
+	
+	<svg class="svg-calLoader" xmlns="http://www.w3.org/2000/svg" width="230" height="230"><path class="cal-loader__path" d="M86.429 40c63.616-20.04 101.511 25.08 107.265 61.93 6.487 41.54-18.593 76.99-50.6 87.643-59.46 19.791-101.262-23.577-107.142-62.616C29.398 83.441 59.945 48.343 86.43 40z" fill="none" stroke="#0099cc" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 10 10 10 10 10 10 432" stroke-dashoffset="77"/><path class="cal-loader__plane" d="M141.493 37.93c-1.087-.927-2.942-2.002-4.32-2.501-2.259-.824-3.252-.955-9.293-1.172-4.017-.146-5.197-.23-5.47-.37-.766-.407-1.526-1.448-7.114-9.773-4.8-7.145-5.344-7.914-6.327-8.976-1.214-1.306-1.396-1.378-3.79-1.473-1.036-.04-2-.043-2.153-.002-.353.1-.87.586-1 .952-.139.399-.076.71.431 2.22.241.72 1.029 3.386 1.742 5.918 1.644 5.844 2.378 8.343 2.863 9.705.206.601.33 1.1.275 1.125-.24.097-10.56 1.066-11.014 1.032a3.532 3.532 0 0 1-1.002-.276l-.487-.246-2.044-2.613c-2.234-2.87-2.228-2.864-3.35-3.309-.717-.287-2.82-.386-3.276-.163-.457.237-.727.644-.737 1.152-.018.39.167.805 1.916 4.373 1.06 2.166 1.964 4.083 1.998 4.27.04.179.004.521-.076.75-.093.228-1.109 2.064-2.269 4.088-1.921 3.34-2.11 3.711-2.123 4.107-.008.25.061.557.168.725.328.512.72.644 1.966.676 1.32.029 2.352-.236 3.05-.762.222-.171 1.275-1.313 2.412-2.611 1.918-2.185 2.048-2.32 2.45-2.505.241-.111.601-.232.82-.271.267-.058 2.213.201 5.912.8 3.036.48 5.525.894 5.518.914 0 .026-.121.306-.27.638-.54 1.198-1.515 3.842-3.35 9.021-1.029 2.913-2.107 5.897-2.4 6.62-.703 1.748-.725 1.833-.594 2.286.137.46.45.833.872 1.012.41.177 3.823.24 4.37.085.852-.25 1.44-.688 2.312-1.724 1.166-1.39 3.169-3.948 6.771-8.661 5.8-7.583 6.561-8.49 7.387-8.702.233-.065 2.828-.056 5.784.011 5.827.138 6.64.09 8.62-.5 2.24-.67 4.035-1.65 5.517-3.016 1.136-1.054 1.135-1.014.207-1.962-.357-.38-.767-.777-.902-.893z" class="cal-loader__plane" fill="#000033"/></svg>
+	
+   </div>
+  
+    <!-- Click capture -->
+   <div class="click-capture"></div>
+
+    <!-- Navbar -->  
+    <nav  class="navbar navbar-desctop">
+      <div class="position-relative w-100">
+
+	    <!-- Brand-->
+	    
+		<div class="container d-block">
+	      <span class="phone  my-0 d-none d-md-block">
+			  
+			
+			  
+			</span>
+	        <span class="email  my-0 d-none d-md-block"></span>
+		</div>
+		
+		
+		<!-- Toggler -->
+		<!--
+	    <button class="toggler">
+			
+			<h6 class="text-white"><ion-icon name="settings"></ion-icon><br>opciones</h6>
+		</button>
+			-->
+	  </div>
+	</nav>
+    
+
+    <nav class="navbar-bottom">
+		
+	  
+	  
+	  <!-- Copyright -->
+	  <div class="copy d-none d-sm-block"> 
+		  <!--
+		<span class="text-white"><span class="text-primary text-typed a-typed a-typed-about">Usa el Ratón</span></span>
+		<svg width="30px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+			<path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+			<path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+		</svg>
+		-->
+		
+    
+		</div>
+    </nav>
+
+    <!-- Navbar Mobile -->  
+    <nav  class="navbar navbar-mobile">
+      <ion-icon class="close" name="close-outline"></ion-icon>
+
+      <!-- language -->
+      <ul class="language">
+         <li class="active"><a href="#">ESP</a></li>
+         
+         
+      </ul>
+
+      <ul class="navbar-nav navbar-nav-mobile">
+        
+        
+        
+        
+      </ul>
+      <div class="navbar-mobile-footer">
+        <p>© EVeneros 2020.</p>
+      </div>
+    </nav>
+
+    <div id="pagepiling">
+
+      <!-- Masthead -->  
+      <section id="home" class="pp-scrollable d-flex section position-absolute" role="main">
+        <div id="canvas"></div>
+		<div class="intro">
+			<div class="scroll-wrap">
+				<div class="container">
+				  <div class="row">
+					  
+					<div class="col-lg-6 col-xl-5" id="texto">
+						<svg viewBox="0 0 600 300" class="svglogo">
+							<symbol id="s-text">
+								<text text-anchor="middle" x="50%" y="80%">Wayra</text>
+							</symbol>
+						
+							<g class = "g-ants">
+								<use xlink:href="#s-text" class="text-copy"></use>
+								<use xlink:href="#s-text" class="text-copy"></use>
+								<use xlink:href="#s-text" class="text-copy"></use>
+								<use xlink:href="#s-text" class="text-copy"></use>
+								<use xlink:href="#s-text" class="text-copy"></use>
+							</g>
+						</svg>
+						<!--<h3 class="glow">Beats</h3>-->
+						<!--<h1><span class="text-primary text-typed a-typed a-typed-about">Vizcacha</span></h1> -->
+					  <div id="texto1"><h3 class="text-white"><span class="text-primary text-typed a-typed a-typed-about">Welcome</span></h3>
+						<img src="img/mouse_loading.png">
+						<p class="text-white">You need a mouse to play.</p>
+						<img src="img/audio.png">
+						<p class="text-white">Please turn on your audio and choose an option.</p>
+						
+						
+					  
+					  
+						<!--<a href="#" class="btn" id="btn_nuevo"> Nuevo juego</a>-->
+						<a href="intro_eng.html" class="btn" > NEW GAME</a>
+						<a href="#levels" class="btn" > CHOOSE A LEVEL</a>
+					</div>	
+					  
+					
+					  
+				  </div>
+				  </div>
+			  </div>
+			</div>
+		  </div>
+		
+          
+        
+      </section>
+
+      <!-- About -->  
+      <section id="about" class="section pp-scrollable d-flex align-items-center position-absolute">
+        <div class="intro">
+          <div class="scroll-wrap">
+            <div class="container">
+              
+             </div>
+          </div>
+        </div>
+      </section>
+ 
+      <!-- Experience -->  
+      <section id="levels" class="navbar-is-white text-white section pp-scrollable d-flex align-items-center position-absolute" style="background-image:url('img/bg/experience.jpg');">
+        <div class="intro">
+          <div class="scroll-wrap">
+          <div class="container">
+            <h3 class="text-white mb-0">LEVELS</h3>
+            <div class="mt-5 pt-5">
+				
+              <div class="carousel-experience owl-carousel">
+	              <div class="experience-item">
+		              
+		              <div class="row row-experience">
+						<div class="col-md-4"><img alt="Carnavalito" src="img/bunny06.gif" ></div>
+						<div class="col-md-4 my-4">🎶 Carnavalito <h3 class="my-0 text-white">Altiplano</h3><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon> </div>
+						<div class="col-md-4"><a href="level01_eng.html" class="btn" >Play <ion-icon name="play-outline"></ion-icon></a></div>
+					</div>
+		              <div class="row row-experience">
+						<div class="col-md-4"><img alt="Quenas" src="img/bunny05.gif" ></div>
+						<div class="col-md-4 my-4">🎶 Quenas <h3 class="my-0 text-white">Yungas</h3><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon> </div>
+						<div class="col-md-4"><a href="level02_eng.html" class="btn" >Play <ion-icon name="play-outline"></ion-icon></a></div>
+		              </div>
+	              </div>
+	              <div class="experience-item">
+		              <div class="row row-experience">
+						<div class="col-md-4"><img alt="Zampoñas" src="img/bunny04.gif" ></div>
+						<div class="col-md-4 my-4">🎶 Zampoñas <h3 class="my-0 text-white">Titicaca Sacred Lake</h3><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon> </div>
+						<div class="col-md-4"><a href="level03_eng.html" class="btn" >Play <ion-icon name="play-outline"></ion-icon></a></div>
+					  </div>
+					  <div class="row row-experience">
+						<div class="col-md-4"><img alt="Zampoñas" src="img/bunny02.gif" ></div>
+						<div class="col-md-4 my-4">🎶 Khantu mix <h3 class="my-0 text-white">Salar de Uyuni</h3><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon> </div>
+						<div class="col-md-4"><a href="level04_eng.html" class="btn" >Play <ion-icon name="play-outline"></ion-icon></a></div>
+		              </div>
+		              
+				  </div>
+				  <div class="experience-item">
+					<div class="row row-experience">
+					  <div class="col-md-4"><img alt="Beats" src="img/bunny16.gif" ></div>
+					  <div class="col-md-4 my-4">🎶 Beats <h3 class="my-0 text-white">Final Level</h3><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon> </div>
+					  <div class="col-md-4"><a href="level05_eng.html" class="btn" >Play <ion-icon name="play-outline"></ion-icon></a></div>
+					</div>
+					
+					
+				</div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->  
+      <section id="skills" class="section pp-scrollable d-flex align-items-center position-absolute">
+        <div class="intro">
+          <div class="scroll-wrap">
+          <div class="container">
+            
+           </div>
+        </div>
+        </div>
+      </section>
+
+      <!-- Projects -->  
+      <section id="projects" class="navbar-is-white text-white section pp-scrollable position-absolute">
+      	<div class="project-wrap">
+      	 
+	        <div class="intro">
+	          <div class="scroll-wrap">
+		        <div class="container">
+		          
+		        </div>
+	          </div>
+	        </div>
+	     </div>
+      </section>
+
+      
+
+      
+
+     
+  </div>
+
+  <!-- Scrollbar -->
+  <!--
+   <div class="progress-nav">
+    <ul class="navbar-nav">
+      <li data-menuanchor="home" class="active"></li>
+      <li data-menuanchor="about"></li>
+      <li data-menuanchor="experience"></li>
+      <li data-menuanchor="skills"></li>
+      <li data-menuanchor="projects"></li>
+       
+     
+    </ul>
+  </div>
+-->
+  <!-- Modals -->
+  
+  <a data-fancybox data-src="#hidden-content" href="javascript:;" id="open-hidden" style="display: none;">
+	
+	<a data-fancybox data-src="#game-over" href="javascript:;" id="open-game-over" style="display: none;">
+  </a>
+  <div style="display: none;" id="hidden-intro" class="modal-game">
+	
+	<h2 class="title-uppercase text-white"><span class="text-primary">¿Cómo jugar?</span></h2>
+				  <div class="carousel-testimonials owl-carousel">
+					  <div>
+						<h3 class="title-uppercase text-white"><span class="text-primary">1.- Combustible</span></h3>
+						  <p class="mb-5">Busca las gotas de combustible derramadas en el aire.</p>
+						  <img src="img/gota.png" style="width: 150px;"/>
+						  <p>Mientras más obtengas, más lejos podrás llegar.<br>Revisa frecuentemente tu nivel de combustible en la parte superior izquierda.
+						  </p>
+						  
+					  </div>
+					  <div>
+						<h3 class="title-uppercase text-white"><span class="text-primary">2.- Enemigos</span></h3>
+						
+						  <p class="mb-5">Evita las nubes negras</p>
+						  <img src="img/nube_negra.png" style="width: 150px;"/>
+						  <p>Si chocas contra  una nube negra perderas combustible.<br>La cantidad de nubes negras aumenta con el nivel del juego.
+						  </p>
+					  </div>
+					  <div>
+						<h3 class="title-uppercase text-white"><span class="text-primary">3.- Indicadores</span></h3>
+						
+								<div class="score__content" >
+									<div class="score__label">Nivel</div>
+									<div class="score__value score__value--level" > ..1</div>
+									<svg class="level-circle"  viewbox="0 0 200 200">
+										<circle  r="80" cx="100" cy="100" fill="none" stroke="#d1b790" stroke-width="24px" />
+										<circle  r="80" cx="100" cy="100" fill="none" #f25346 stroke="#D4F21B" stroke-width="14px" stroke-dasharray="502" />
+									</svg>
+								</div>
+								<div class="score__content" >
+									<div class="score__label">Distancia</div>
+									<div class="score__value score__value--dist" >100</div>
+								</div>
+								<div class="score__content" >
+									<div class="score__label">Combustible</div>
+									<div class="score__value score__value--energy" >
+										<div class="energy-bar" ></div>
+										
+									</div>
+								</div>
+								<br><br>
+						  <p>Nivel: Te indica el nivel actual del juego<br>Distancia: El recorrido que haces en millas.<br>Combustible: La cantidad de combustible restante 
+						  </p>
+					  </div>
+					  
+				  </div>
+				  <h2><a href="#" id="btn_play">Play <ion-icon name="play-circle-outline"></ion-icon></a></h2>
+	
+</div>
+  <div style="display: none;" id="hidden-content" class="modal-game">
+	<h2>Pausa</h2>
+	
+	
+	<p><a href="#" id="btn_backtoplay">Volver al juego<br><ion-icon name="play-circle-outline"></ion-icon></a></p>
+</div>
+<div style="display: none;" id="game-over" class="modal-game">
+	<h2>Game Over</h2>
+	
+	<p><a href="#" id="btn_reset">Volver a jugar<ion-icon name="refresh-circle-outline"></ion-icon></a></p>
+</div>
+
+  <!-- Optional JavaScript -->
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/popper.min.js" ></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.pagepiling.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  
+  <script src="js/interface.js"></script>
+
+  <script type="text/javascript" src="js/three.min.js"></script>
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/ThreeCSG.js"></script>
+  
+  
+	<script type="text/javascript" src="js/howler.core.js"></script>
+	
+	
+	
+	<script type="text/javascript" src="js/game_map.js" ></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	
+	
+<script>
+
+/*	//para musica en la pagina pero no three*/
+function TuneGenerator() {    
+    
+    const notesGenerator = new NotesGenerator();
+
+    setInterval(function() {
+        notesGenerator.playNote(3);
+    }, 800);
+ 
+    setInterval(function() {
+        notesGenerator.playNote(0);
+    }, 4200);
+}
+
+function NotesGenerator() {
+
+    const context = new AudioContext();
+
+    // Choose the importance of each note. Notes with a 0 probability won't be played
+    const nextNote = distribution( {131:2, 139:0, 147:1, 156:0, 165:2, 175:1, 185:0, 196:2, 208:0, 220:1, 233:0, 247:1,
+                                 262:2, 277:0, 294:1, 311:0, 330:2, 349:1, 370:0, 392:2, 415:0, 440:1, 466:0, 496:1} )
+
+    // The factor determines the octave
+    // Choose the importance of each factor
+    const nextFac = distribution( {'-1':2,'0':2, '1':2, '2':1, '3':0 } );
+
+    this.playNote = function(maxFactor) {
+        const oscillator = context.createOscillator();
+
+        const waveForm = Math.random() > 0.5 ? "sine" : "triangle";
+        oscillator.type = waveForm;        
+
+        let fac = parseInt(nextFac());
+        while(fac > maxFactor)
+            fac = parseInt(nextFac());
+
+        oscillator.frequency.value = parseInt(nextNote()) * Math.pow(2, fac );
+
+        const gainNode = context.createGain();
+        gainNode.gain.value = .2;
+        
+        // generate sound
+        oscillator.connect(gainNode);
+        gainNode.connect(context.destination);
+
+        oscillator.start(0);
+        
+        const duration = getRandomInt(2, 6);
+
+        gainNode.gain.linearRampToValueAtTime(0.0001, context.currentTime + duration);
+        oscillator.stop(context.currentTime + duration);
+    }
+
+   
+    function distribution(obj) {
+        const o = normalizedObj(obj);
+
+        return function() {
+            let count = 0;
+            const rand = Math.random();
+            
+            for(let key in o) {
+                count += o[key];
+                
+                if(rand < count)
+                    return key;
+            }
+        }
+    }
+
+    
+    function normalizedObj(obj) {
+        var normalizedObj = {};
+        var sum = 0;
+
+        for(key in obj)
+            sum += obj[key];
+
+        for(key in obj)
+            normalizedObj[key] = obj[key] / sum;
+
+        return normalizedObj;
+    }
+
+    function getRandomInt(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+    }
+
+}
+/*end music*/
+	var click = new Howl({
+  src: ['sounds/click.wav'],
+  loop: false,
+  volume: 0.3
+});
+var fondo = new Howl({
+  src: ['sounds/charango_loop_waiting.wav'],
+  loop: true,
+  volume: 0.2
+});
+
+		$(document).ready(function() {
+	$.fn.pagepiling.setAllowScrolling(false);
+	$.fn.pagepiling.setMouseWheelScrolling(false);
+	$.fn.pagepiling.setKeyboardScrolling(false);
+	fondo.play();
+//TuneGenerator() ;
+	
+});
+
+$( "a" ).click(function() {
+	click.play();
+});
+
+$("#btn_nuevo").click(function(){
+	$("#texto1").hide();		
+	$("#texto2").show();		
+	});
+	$("#btn_easy").click(function(){
+	
+	});
+	$("#btn_medium").click(function(){
+
+		//$("#projects").focus();
+		
+	
+	});
+	$("#btn_hard").click(function(){
+		//camera.position.z=10;
+		//camera.position.x=10;
+		/*
+			camera.fov = 6.4;
+			
+			camera.zoom = 0.2;
+			camera.updateProjectionMatrix();
+		*/
+		//document.getElementById(".navbar").style.display = "initial";
+		//$('.navbar').show();
+		//$('.navbar').toggle();
+		$('.toggler').click();
+  
+	});
+// execute more code
+
+
+
+</script>
+</body>
+</html>
